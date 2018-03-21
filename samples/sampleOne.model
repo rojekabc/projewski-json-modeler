@@ -1,0 +1,15 @@
+JSON_MODEL(User,
+	JSON_STRING(name),
+	JSON_STRING(password),
+	JSON_BOOLEAN(access));
+
+JSON_MODEL(Access,
+	JSON_BOOLEAN(room),
+	JSON_BOOLEAN(car));
+
+JSON_MODEL(OneRequest,
+	JSON_STRING(text),
+	JSON_NUMBER(value),
+	JSON_BOOLEAN(switcher),
+	JSON_ARRAY(User, users),
+	JSON_OBJECT(Access, access));
